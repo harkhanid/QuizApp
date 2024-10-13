@@ -80,10 +80,10 @@ import data from "./data.json";
                     </div>
                     <p>{opt}</p>
                       { (status === "submitted" && opt === question.answer) &&
-                        (<img src='/images/icon-correct.svg' alt='correct answer icon'/>) 
+                        (<img src='${process.env.PUBLIC_URL}/images/icon-correct.svg' alt='correct answer icon'/>) 
                       }
                       { (status === "submitted" && opt === selectedAnswer && opt !== question.answer) &&
-                            (<img src='/images/icon-error.svg' alt='wrong answer icon'/>)
+                            (<img src='${process.env.PUBLIC_URL}/images/icon-error.svg' alt='wrong answer icon'/>)
                     }
                     </button>
             
@@ -93,7 +93,7 @@ import data from "./data.json";
       { status === "invalidAnswer" 
       &&
       <div className='error-message split'>
-        <img src='/images/icon-error.svg' alt='error icon'/>
+        <img src='${process.env.PUBLIC_URL}/images/icon-error.svg' alt='error icon'/>
         <p>Please select an answer</p>
       </div>
       }

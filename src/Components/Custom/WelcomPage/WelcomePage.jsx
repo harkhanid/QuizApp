@@ -21,7 +21,7 @@ const WelcomePage = ({setTopic}) => {
         {
           MenuItems.map(item =>{
             return (
-              <button key={item.title} onClick={()=>{handleClick(item)}} className='option-btn' value={item.title}><div className="icon-container" style={{backgroundColor:item.iconBg}}><img src={`/images/${item.img}`} alt='html icon' /></div> <p>{item.title}</p></button>
+              <button key={item.title} onClick={()=>{handleClick(item)}} className='option-btn' value={item.title}><div className="icon-container" style={{backgroundColor:item.iconBg}}><img src={`${process.env.PUBLIC_URL}/images/${item.img}`} alt='html icon' /></div> <p>{item.title}</p></button>
             )
           })
         }
