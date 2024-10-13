@@ -10,16 +10,20 @@ const Header = ({topic, darkMode, setDarkMode}) => {
       <>
       <div className="icon-container" style={{
       backgroundColor: `${topic.iconBg}`}}>
-      <img src='/images/icon-accessibility.svg' />
+      <img src='/images/icon-accessibility.svg' alt='topic icon'/>
       </div>    
       <h2>{ topic.title}</h2> 
       </>
       }
       <div className='header_switch split'>
-        <img src={`/images/${darkMode?"icon-sun-light.svg":"icon-sun-dark.svg"}`}/>
-        {/* <CustomSwitch width={32} height={20}  className="mobile" darkMode={darkMode} onChangeFn={ () => setDarkMode((prevValue)=> !prevValue)} /> */}
-        <CustomSwitch width={32} height={20}  className="desktop" darkMode={darkMode} onChangeFn={ () => setDarkMode((prevValue)=> !prevValue)} />
-        <img src={`/images/${darkMode?"icon-moon-light.svg":"icon-moon-dark.svg"}`} />
+        <img src={`/images/${darkMode?"icon-sun-light.svg":"icon-sun-dark.svg"}`} alt='sun icon'/>
+        <div className="mobile-switch">
+          <CustomSwitch device="mobile" darkMode={darkMode} onChangeFn={ () => setDarkMode((prevValue)=> !prevValue)} />
+        </div> 
+        <div className="desktop-switch">
+          <CustomSwitch device="desktop" darkMode={darkMode} onChangeFn={ () => setDarkMode((prevValue)=> !prevValue)} />
+        </div>
+        <img src={`/images/${darkMode?"icon-moon-light.svg":"icon-moon-dark.svg"}`}  alt='moon icon'/>
       </div>
     </div>
   )

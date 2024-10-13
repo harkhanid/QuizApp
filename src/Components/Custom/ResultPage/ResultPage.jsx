@@ -23,7 +23,7 @@ const ResultPage = ({correctCount, topic, setTopic}) => {
           <div className='split card-title' >
             <div className="icon-container" style={{
               backgroundColor: `${topic?.iconBg}`}}>
-              <img src='/images/icon-accessibility.svg' />
+              <img src='/images/icon-accessibility.svg' alt='topic icon'/>
             </div>
             <p>{topic?.title}</p>
           </div>

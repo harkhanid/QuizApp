@@ -1,34 +1,31 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 
 
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 8,
-  borderRadius: 5,
-  paddingLeft: 5,
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: theme.palette.grey[200],
-    ...theme.applyStyles('dark', {
-      backgroundColor: theme.palette.grey[800],
-    }),
-  },
-  [`& .${linearProgressClasses.bar}`]: {
-    height: 4,
-    marginTop: 2,
-    marginLeft: 20,
-    borderRadius: 5,
-    backgroundColor: '#1a90ff',
-    ...theme.applyStyles('dark', {
-      backgroundColor: '#308fe8',
-    }),
-  },
-}));
+
 
 const CustomProgressBar = props => {
+  const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+    height: 16,
+    borderRadius: 10,
+    [`&.${linearProgressClasses.colorPrimary}`]: {
+      backgroundColor: "#FFF",
+    },
+    [`& .${linearProgressClasses.bar}`]: {
+      height: 8,
+      marginTop: 4,
+      marginLeft: 4,
+      width: `${Math.max(props.prog - 4, 0)}%`,
+      borderRadius: 10,
+      backgroundColor: '#A729F5',
+      ...theme.applyStyles('dark', {
+        backgroundColor: '#308fe8',
+      }),
+    },
+  }));
   return (
-    <BorderLinearProgress variant="determinate" value={props.prog} className="progress_bar" />
+    <BorderLinearProgress variant="determinate" className="progress_bar" />
   )
 }
 

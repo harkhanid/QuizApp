@@ -40,7 +40,7 @@ import data from "./data.json";
 
   }
 
-  const handleSubmit = () =>{
+  const handleSubmit = (e) =>{
     if(selectedAnswer === ""){
       setStatus("invalidAnswer")
     }else{
@@ -50,7 +50,7 @@ import data from "./data.json";
       }
       setTimeout(()=>{
         resetFunction();
-        if(questionCount ==  currentSet[0].questions.length - 1){
+        if(questionCount ===  currentSet[0].questions.length - 1){
           navigate("/result");
         }else{
           setQuestionCount((prev)=> prev+1);
@@ -66,34 +66,34 @@ import data from "./data.json";
       <p className='question'>{question?.question}</p>
       <CustomProgressBar prog={questionCount * 10} />
     </div>
-    <div className={`answer_card flow-content ${status == "submitted" ? "submitted":"not-submitted"}`}> 
+    <div className={`answer_card flow-content ${status === "submitted" ? "submitted":"not-submitted"}`}> 
       {
         question?.options.map((opt, i) =>{
           return <button 
                     key={i} 
                     value={opt} 
                     correct={opt === question?.answer? "true": "false"}
-                    className={`option-btn ${opt == selectedAnswer? "selected": ""} correct`} 
+                    className={`option-btn ${opt === selectedAnswer? "selected": ""} correct`} 
                     onClick={()=> handleOptionAction(opt)} >
                     <div className='option-icon icon-container'>
                       <p>{prefix[i]}</p>
                     </div>
                     <p>{opt}</p>
-                      { (status == "submitted" && opt === question.answer) &&
-                        (<img src='/images/icon-correct.svg' />) 
+                      { (status === "submitted" && opt === question.answer) &&
+                        (<img src='/images/icon-correct.svg' alt='correct answer icon'/>) 
                       }
-                      { (status == "submitted" && opt == selectedAnswer && opt != question.answer) &&
-                            (<img src='/images/icon-error.svg' />)
+                      { (status === "submitted" && opt === selectedAnswer && opt !== question.answer) &&
+                            (<img src='/images/icon-error.svg' alt='wrong answer icon'/>)
                     }
                     </button>
             
         })
       }     
-      <button disabled={status == "submitted" } className='main-btn'><p className='center-text' onClick={()=>{handleSubmit()}}>Submit Answer</p></button>
+      <button disabled={status === "submitted" } className='main-btn' onClick={(e)=>handleSubmit(e)}><p className='center-text' >Submit Answer</p></button>
       { status === "invalidAnswer" 
       &&
       <div className='error-message split'>
-        <img src='/images/icon-error.svg' />
+        <img src='/images/icon-error.svg' alt='error icon'/>
         <p>Please select an answer</p>
       </div>
       }

@@ -58,7 +58,7 @@
 
 @media (min-width: 37.5em) {
   .answer_card{
-    --spacer-cmp: 4rem;
+    --spacer-cmp: 3.5rem;
     --spacer-fs: 1.5rem;
   }
 }
