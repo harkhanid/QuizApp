@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/QuizApp/static/css/main.d2bdd4f9.css",
-    "main.js": "/QuizApp/static/js/main.4cb1a68f.js",
+    "main.js": "/QuizApp/static/js/main.6e6f61f0.js",
     "static/js/453.ed3810f9.chunk.js": "/QuizApp/static/js/453.ed3810f9.chunk.js",
     "static/media/Rubik-VariableFont_wght.ttf": "/QuizApp/static/media/Rubik-VariableFont_wght.3a4acc0356c6ea73f2c3.ttf",
     "static/media/Rubik-Italic-VariableFont_wght.ttf": "/QuizApp/static/media/Rubik-Italic-VariableFont_wght.d83d9d961a7aaca406c2.ttf",
@@ -9,11 +9,11 @@
     "static/media/pattern-background-mobile-dark.svg": "/QuizApp/static/media/pattern-background-mobile-dark.1cff22465c45eb596969.svg",
     "static/media/pattern-background-mobile-light.svg": "/QuizApp/static/media/pattern-background-mobile-light.2a1f70bd700b2be97b86.svg",
     "main.d2bdd4f9.css.map": "/QuizApp/static/css/main.d2bdd4f9.css.map",
-    "main.4cb1a68f.js.map": "/QuizApp/static/js/main.4cb1a68f.js.map",
+    "main.6e6f61f0.js.map": "/QuizApp/static/js/main.6e6f61f0.js.map",
     "453.ed3810f9.chunk.js.map": "/QuizApp/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2bdd4f9.css",
-    "static/js/main.4cb1a68f.js"
+    "static/js/main.6e6f61f0.js"
   ]
 }

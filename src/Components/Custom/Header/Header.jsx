@@ -10,7 +10,7 @@ const Header = ({topic, darkMode, setDarkMode}) => {
       <>
       <div className="icon-container" style={{
       backgroundColor: `${topic.iconBg}`}}>
-      <img src='${process.env.PUBLIC_URL}/images/icon-accessibility.svg' alt='topic icon'/>
+      <img src={'${process.env.PUBLIC_URL}/images/icon-accessibility.svg'} alt='topic icon'/>
       </div>    
       <h2>{ topic.title}</h2> 
       </>

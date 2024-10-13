@@ -1,10 +1,23 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "./Components/Custom/Header/Header";
 import QuizPage from "./Components/Custom/QuizPage/QuizPage";
 import ResultPage from "./Components/Custom/ResultPage/ResultPage";
 import WelcomePage from "./Components/Custom/WelcomPage/WelcomePage";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+const QuizGuard = ({ topic, children }) => {
+  if (!topic) {
+    // Redirect to home if topic is not set
+    return <Navigate to="/" />;
+  }
+  return children;
+};
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -21,17 +34,21 @@ function App() {
             <Route
               path="/quiz/:title"
               element={
-                <QuizPage setCorrectCount={setCorrectCount} topic={topic} />
+                <QuizGuard topic={topic}>
+                  <QuizPage setCorrectCount={setCorrectCount} topic={topic} />
+                </QuizGuard>
               }
             />
             <Route
               path="/result"
               element={
-                <ResultPage
-                  correctCount={correctCount}
-                  topic={topic}
-                  setTopic={setTopic}
-                />
+                <QuizGuard topic={topic}>
+                  <ResultPage
+                    correctCount={correctCount}
+                    topic={topic}
+                    setTopic={setTopic}
+                  />
+                </QuizGuard>
               }
             />
           </Routes>
