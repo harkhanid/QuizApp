@@ -5,7 +5,7 @@ import QuizPage from "./Components/Custom/QuizPage/QuizPage";
 import ResultPage from "./Components/Custom/ResultPage/ResultPage";
 import WelcomePage from "./Components/Custom/WelcomPage/WelcomePage";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate,
