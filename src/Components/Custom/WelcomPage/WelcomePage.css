@@ -1,0 +1,26 @@
+
+
+.text-hint{
+  margin-top: 0.5rem;
+}
+
+.options{
+  --spacer-fs: 0.75rem;
+}
+
+@media (min-width: 37.5em) {
+  .big-text{
+    font-size: var(--fs-500);
+    line-height: 1.2;
+  }
+
+  .welcome_page{
+    --spacer-cmp: 4rem;
+
+  }
+
+  .options{
+    --spacer-fs: 1.5rem;
+  }
+}
+

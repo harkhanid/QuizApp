@@ -1,0 +1,17 @@
+[{
+  "title": "HTML",
+  "img": "icon-html.svg",
+  "iconBg": "#FFF1E9"
+},{
+  "title": "CSS",
+  "img": "icon-css.svg",
+  "iconBg": "#E0FDEF"
+},{
+  "title": "JavaScript",
+  "img": "icon-js.svg",
+  "iconBg": "#E0FDEF"
+},{
+  "title": "Accessibility",
+  "img": "icon-accessibility.svg",
+  "iconBg": "#F6E7FF"
+}]

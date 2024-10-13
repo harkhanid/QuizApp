@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Rubik";
+  src: url(./fonts/Rubik-VariableFont_wght.ttf), url(./fonts/Rubik-Italic-VariableFont_wght.ttf);
+}
+
+:root{
+  --clr-primary-100: #313e51;
+  --clr-primary-200: #3b4d66;
+  --clr-primary-300: #626c7f;
+  --clr-primary-400: #abc1e1;
+  --clr-primary-500: #f4f6fa;
+  --clr-primary-600: #ffffff;
+
+  --clr-green: #26d782;
+  --clr-red: #ee5454;
+  --clr-accent: #a729f5; 
+
+  --fs-100: 0.875rem;
+  --fs-200: 1.125rem;
+  --fs-300: 1.75rem;
+  --fs-350: 2.25rem;
+  --fs-400: 2.5rem;
+  --fs-500: 4rem;
+}
+
+.light{
+  --clr-bg: var(--clr-primary-500);
+  --clr-bg-btn: var(--clr-primary-600);
+
+  --clr-fg-main: var(--clr-primary-100);
+  --clr-fg-sec: var(--clr-primary-300);
+
+  --clr-btn-selected: var(--clr-accent);
+}
+
+.dark{
+  --clr-bg: var(--clr-primary-100);
+  --clr-bg-btn: var(--clr-primary-200);
+
+  --clr-fg-main: var(--clr-primary-600);
+  --clr-fg-sec: var(--clr-primary-400);
+
+  --clr-btn-selected: var(--clr-accent);
+}
+
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+hr,
+label,
+figure {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+
+h1,h2,h3{
+  line-height: 1;
+}
+
+ul, ol{
+  padding: 0;
+  margin: 0;
+
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button{
+  border-style: none;
+  border-radius: 0.75rem;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* utility class */
+
+.flow-content > * + *{
+  margin-top: var(--spacer-fs, 2rem);
+}
+
+.child-margin-top > * {
+  margin-top: var(--spacer-cmp, 2rem);
+}
+
+.split{
+  display: flex;
+}
+
+body{
+  font-family: 'Rubik';
+}
+
+
+.center-text{
+  text-align: center;
+}
+
+.light{
+  font-weight: 300;
+}
+
+button{
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.875rem;
+  cursor: pointer;
+}
+
+button > .icon-container {
+  flex-shrink: 0;
+}
+
+.icon-container p {
+  text-align: center;
+}
+
+button p{
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
