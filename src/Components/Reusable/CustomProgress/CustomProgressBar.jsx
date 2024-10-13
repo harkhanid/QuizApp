@@ -25,7 +25,7 @@ const CustomProgressBar = props => {
     },
   }));
   return (
-    <BorderLinearProgress variant="determinate" className="progress_bar" />
+    <BorderLinearProgress variant="determinate" value={100} className="progress_bar" />
   )
 }
 
