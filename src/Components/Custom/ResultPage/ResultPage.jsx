@@ -2,6 +2,18 @@ import React from 'react'
 import "./ResultPage.css";
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * ResultPage Component
+ * Displays the quiz results including score, correct answers, and performance metrics.
+ * Provides options to play again or return to the welcome page.
+ * 
+ * @component
+ * @param {Object} props - Component props
+ * @param {number} props.score - The user's quiz score
+ * @param {number} props.totalQuestions - Total number of questions in the quiz
+ * @param {Function} props.resetQuiz - Function to reset the quiz state
+ * @returns {React.ReactNode} The rendered result page
+ */
 
 const ResultPage = ({correctCount, topic, setTopic}) => {
   const navigate = useNavigate();

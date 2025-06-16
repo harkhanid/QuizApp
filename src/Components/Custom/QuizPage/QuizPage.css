@@ -17,8 +17,14 @@
   color: var(--clr-primary-300);
 }
 
+
+
 .not-submitted .selected{
   border: 2px solid var(--clr-btn-selected); 
+}
+
+.not-submitted .not-selected:hover .option-icon{
+  background-color: var(--clr-accent-light);
 }
 
 .not-submitted .selected .option-icon{
