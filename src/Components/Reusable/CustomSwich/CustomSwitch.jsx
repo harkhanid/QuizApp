@@ -2,6 +2,17 @@ import React from 'react'
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
 
+/**
+ * CustomSwitch Component
+ * A customizable switch component that adapts its size based on the viewport.
+ * Used for toggling features like dark mode.
+ * 
+ * @component
+ * @param {Object} props - Component props
+ * @param {boolean} props.darkMode - Current state of the switch
+ * @param {Function} props.onChangeFn - Function to call when the switch is toggled
+ * @returns {React.ReactNode} The rendered switch component
+ */
 const CustomSwitch = ({device, onChangeFn, darkMode ,className}) => {
   const setting = {
     "mobile" : {

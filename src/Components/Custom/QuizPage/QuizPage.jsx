@@ -7,7 +7,20 @@ import CustomProgressBar from '../../Reusable/CustomProgress/CustomProgressBar';
 import "./QuizPage.css";
 import data from "./data.json";
 
-  const QuizPage = ({setCorrectCount}) => {
+/**
+ * QuizPage Component
+ * Displays the quiz interface with questions, options, and progress tracking.
+ * Handles user answers and navigation between questions.
+ * 
+ * @component
+ * @param {Object} props - Component props
+ * @param {Object} props.topic - The current quiz topic
+ * @param {string} props.topic.title - The title of the quiz topic
+ * @param {Array} props.topic.questions - Array of quiz questions
+ * @param {Function} props.setScore - Function to update the quiz score
+ * @returns {React.ReactNode} The rendered quiz page
+ */
+const QuizPage = ({setCorrectCount}) => {
     const prefix = ['A', 'B', 'C', 'D'];
     const {title} = useParams();
     const navigate = useNavigate();
@@ -73,7 +86,7 @@ import data from "./data.json";
                     key={i} 
                     value={opt} 
                     correct={opt === question?.answer? "true": "false"}
-                    className={`option-btn ${opt === selectedAnswer? "selected": ""} correct`} 
+                    className={`option-btn ${opt === selectedAnswer? "selected": "not-selected"} correct`} 
                     onClick={()=> handleOptionAction(opt)} >
                     <div className='option-icon icon-container'>
                       <p>{prefix[i]}</p>

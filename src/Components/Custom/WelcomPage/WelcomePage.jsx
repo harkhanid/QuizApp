@@ -2,6 +2,17 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 import  MenuItems from "../../MenuItems.json";
 import "./WelcomePage.css";
+
+/**
+ * WelcomePage Component
+ * The landing page of the quiz application that displays available quiz topics.
+ * Users can select a topic to start a quiz.
+ * 
+ * @component
+ * @param {Object} props - Component props
+ * @param {Function} props.setTopic - Function to set the selected quiz topic
+ * @returns {React.ReactNode} The rendered welcome page
+ */
 const WelcomePage = ({setTopic}) => {
   const navigate = useNavigate();
 
